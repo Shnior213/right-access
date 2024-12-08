@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RightAccess - מידע משפטי</title>
+    <link rel="stylesheet" href="../css/info.css">
+</head>
+<body>
+    <header>
+        <h1>RightAccess</h1>
+        <p>מידע על זכויות פרטיות ברשת</p>
+    </header>
+    <nav>
+        <a href="index.html">דף הבית</a>
+        <a href="#info">מידע משפטי</a>
+        <a href="../faq/index.html">שאלות ותשובות</a>
+        <a href="../contact/index.html">צור קשר</a>
+    </nav>
+    <main>
+        <section dir="rtl" id="info">
+            <h2>מידע משפטי</h2>
+            <article>
+                <h3>הזכות לפרטיות</h3>
+                <p>כל אדם זכאי לשמירה על פרטיותו ברשת, כולל מידע אישי ורגיש.</p>
+            </article>
+            <article>
+                <h3>הזכות למחיקת מידע</h3>
+                <p>משתמשים יכולים לבקש להסיר מידע אישי מאתרים במידת הצורך.</p>
+            </article>
+            <article>
+                <h3>הזכות לגישה למידע</h3>
+                <p>לכל אדם יש זכות לדעת איזה מידע נאסף עליו וכיצד הוא מנוהל.</p>
+            </article>
+        </section>
+    </main>
+    <button class="accessibility" onclick="toggleMenu()">נגישות</button>
+    <div class="accessibility-menu" id="accessibility-menu">
+        <button onclick="changeFontSize(1)">הגדלת טקסט</button>
+        <button onclick="changeFontSize(-1)">הקטנת טקסט</button>
+        <button onclick="toggleHighContrast()">מצב ניגודיות</button>
+    </div>
+    <script src="../javaScript/scripts.js"></script>
+</body>
+</html>
