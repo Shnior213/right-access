@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RightAccess - מידע משפטי</title>
-    <link rel="stylesheet" href="../css/info.css">
+    <link rel="stylesheet" href="/css/accessibilty.css">
 </head>
 <body>
     <header>
@@ -14,7 +14,6 @@
     <nav>
         <a href="index.html">דף הבית</a>
         <a href="#info">מידע משפטי</a>
-        <a href="../faq/index.html">שאלות ותשובות</a>
         <a href="../contact/index.html">צור קשר</a>
     </nav>
     <main>
@@ -34,12 +33,21 @@
             </article>
         </section>
     </main>
-    <button class="accessibility" onclick="toggleMenu()">נגישות</button>
-    <div class="accessibility-menu" id="accessibility-menu">
-        <button onclick="changeFontSize(1)">הגדלת טקסט</button>
-        <button onclick="changeFontSize(-1)">הקטנת טקסט</button>
-        <button onclick="toggleHighContrast()">מצב ניגודיות</button>
+    <div id="accessibility-container">
+        <button id="accessibility-toggle" onclick="toggleMenu()">☰</button>
+        <div id="accessibility-menu" class="hidden">
+            <button onclick="toggleHighContrast()">High Contrast</button>
+            <button onclick="changeFontSize(1)">Increase Font Size</button>
+            <button onclick="changeFontSize(-1)">Decrease Font Size</button>
+            <button onclick="toggleColorBlindMode()">Color Blind Mode</button>
+            <button onclick="pauseAllMedia()">Pause Media</button>
+            <button onclick="changeLineHeight(0.2)">Increase Line Height</button>
+            <button onclick="changeLineHeight(-0.2)">Decrease Line Height</button>
+        </div>
     </div>
-    <script src="../javaScript/scripts.js"></script>
+    <h1>Welcome to Accessible Page</h1>
+    <p>This page has accessibility features!</p>
+    <div id="sr-announcement" style="position: absolute; left: -9999px;"></div>
+    <script defer src="/javaScript/accessibility.js"></script>
 </body>
 </html>
