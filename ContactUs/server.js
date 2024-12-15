@@ -5,6 +5,12 @@ const nodemailer = require('nodemailer');
 const app = express();
 require("dotenv").config();
 
+const myemail = process.env.MY_EMAIL;
+const mypass = process.env.PASS;
+
+console.log(myemail); // אמור להציג את המייל
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors())
@@ -13,8 +19,8 @@ app.use(cors())
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'shnioramir123@gmail.com',
-        pass: process.env.pass,
+        user: myemail,
+        pass: mypass,
     },
 });
 
@@ -29,7 +35,7 @@ app.post('/submit', (req, res) => {
 
     const mailOptions = {
         from: email,
-        to: 'shnioramir123@gmail.com',
+        to: myemail,
         subject: `New Contact Form Submission from ${name}`,
         text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
     };
