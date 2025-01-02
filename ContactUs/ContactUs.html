@@ -1,4 +1,74 @@
 <!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>צור קשר</title>
+    <link rel="stylesheet" href="./ContactUs.css" />
+    <link rel="stylesheet" href="../Accessiclity/accessibilty.css" />
+    <script defer src="../Accessiclity/accessibility.js"></script>
+    <script defer src="./Contactus.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>RightAccess</h1>
+      <p>פלטפורמה להנגשת מידע משפטי וזכויות פרטיות</p>
+    </header>
+    <nav>
+      <a href="../Home Page/index.html">דף הבית</a>
+      <a href="../Legal information/info.html">מידע משפטי</a>
+      <a href="../faq/index.html">שאלות ותשובות</a>
+      <a href="#contact">צור קשר</a>
+    </nav>
+    <main dir="rtl">
+      <section id="contact">
+        <form class="contact-form">
+          <h2>צור קשר</h2>
+
+          <div id="message-box" role="alert" aria-live="polite"></div>
+
+          <label for="name">שם: <span class="required">(חובה)</span></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="הזן את שמך"
+            required
+          />
+
+          <label for="email"
+            >אימייל: <span class="required">(חובה)</span></label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@example.com"
+            required
+          />
+
+          <label for="phone">מספר טלפון:</label>
+          <input type="tel" id="phone" name="phone" placeholder="050-1234567" />
+
+          <label for="message"
+            >שאלה: <span class="required">(חובה)</span></label
+          >
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="כתוב את השאלה שלך כאן"
+            required
+          ></textarea>
+
+          <button type="submit">שלח</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -44,3 +114,4 @@
     
 </body>
 </html>
+ -->
