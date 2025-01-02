@@ -10,10 +10,15 @@
 
 </head>
 <body>
-    <header>
-        <h1>RightAccess</h1>
-        <p>פלטפורמה להנגשת מידע משפטי וזכויות פרטיות</p>
-    </header>
+        <header>
+            <h1>RightAccess</h1>
+            <p>פלטפורמה להנגשת מידע משפטי וזכויות פרטיות</p>
+            <div id="admin-login">
+                <input type="password" id="admin-password" placeholder="סיסמת אדמין">
+                <button id="admin-login-btn">התחבר</button>
+                <button id="admin-logout-btn" style="display: none;">התנתק</button>
+            </div>
+        </header>
     <nav>
         <a href="../Home Page/index.html">דף הבית</a>
         <a href="../Legal information/info.html">מידע משפטי</a>
@@ -27,28 +32,28 @@
             <p><b>מה מטרת האתר?</b></p>
             <p> +
             </br>
-            <span class="answer">האתר נועד להנגיש מידע משפטי בצורה פשוטה וברורה כך שכל אחד יוכל להבין את הזכויות והחובות שלו</span>
+            <span class="answer_a">האתר נועד להנגיש מידע משפטי בצורה פשוטה וברורה כך שכל אחד יוכל להבין את הזכויות והחובות שלו</span>
         </p>
         </div>
         <div class="a">
             <p><b>איך ניתן למצוא מידע משפטי באתר?</b></p>
             <p> +
             </br>
-            <span class="answer">תוכלו להשתמש בתיבת החיפוש בראש העמוד או לדפדף בקטגוריות בעמוד "מידע משפטי"</span>
+            <span class="answer_a">תוכלו להשתמש בתיבת החיפוש בראש העמוד או לדפדף בקטגוריות בעמוד "מידע משפטי"</span>
         </p>
         </div>
         <div class="a">
             <p><b>האם האתר מותאם לאנשים עם מוגבלות?</b</p>
             <p> +
             </br>
-            <span class="answer">כן, האתר כולל תוספי נגישות כמו שינוי גודל טקסט, התאמה לעיוורי צבעים ועוד</span>
+            <span class="answer_a">כן, האתר כולל תוספי נגישות כמו שינוי גודל טקסט, התאמה לעיוורי צבעים ועוד</span>
         </p>
         </div>
         <div class="a">
             <p><b>האם המידע באתר מעודכן?</b></p>
             <p> +
             </br>
-            <span class="answer" >אנו משתדלים לעדכן את התוכן בהתאם לשינויים בחוק, אך האחריות לבדוק מול יועץ משפטי מוטלת על המשתמש</span>
+            <span class="answer_a" >אנו משתדלים לעדכן את התוכן בהתאם לשינויים בחוק, אך האחריות לבדוק מול יועץ משפטי מוטלת על המשתמש</span>
         </p>
         </div>
     </section>
@@ -57,28 +62,28 @@
             <p><b>האם המידע באתר מהווה ייעוץ משפטי?</b></p>
             <p>+
             <br/>
-                <span class="answer">לא, המידע באתר מהווה סקירה כללית ואינו מהווה ייועץ משפטי מחייב</span>
+                <span class="answer_a">לא, המידע באתר מהווה סקירה כללית ואינו מהווה ייועץ משפטי מחייב</span>
             </p>
         </div>
         <div class="a">
             <p><b>מה לעושת אם לא מצאת תשובה לשאלה המשפטית שלי?</b></p>
             <p>+
             <br/>
-                <span class="answer">ניתן לפנות אלינו דרך עמוד <a href="../ContactUs/ContactUs.html">צור קשר</a>, ואנו נשמח לסייע או להפנת לגורם מקצועי מתאים</span>
+                <span class="answer_a">ניתן לפנות אלינו דרך עמוד <a href="../ContactUs/ContactUs.html">צור קשר</a>, ואנו נשמח לסייע או להפנת לגורם מקצועי מתאים</span>
             </p>
         </div>
         <div class="a">
             <p><b>האם הפרטים שאני מספק באתר נשמרים?</b></p>
             <p>+
             <br/>
-                <span class="answer"> הפרטיות שלך חשובה לנו. אנו שומרים רק פרטיים הכרחיים לפי תקנות הגנת הפרטיות</span>
+                <span class="answer_a"> הפרטיות שלך חשובה לנו. אנו שומרים רק פרטיים הכרחיים לפי תקנות הגנת הפרטיות</span>
             </p>
         </div>
         <div class="a">
             <p><b>האם אני יכול למחוק את הנתונים שלי מהמערכת?</b></p>
             <p>+
             <br/>
-                <span class="answer">בהחלט. ניתן לפנות אלינו לבקשת מחיקה דרך טופס <a href="../ContactUs/ContactUs.html">צור קשר</a></span>
+                <span class="answer_a">בהחלט. ניתן לפנות אלינו לבקשת מחיקה דרך טופס <a href="../ContactUs/ContactUs.html">צור קשר</a></span>
             </p>
         </div>
     </section>
@@ -95,11 +100,11 @@
           <button id="submit-question">הוסף שאלה</button>
       </div>
   
-      <div id="admin-login">
+      <!-- <div id="admin-login">
           <h3>התחברות לאדמין</h3>
           <input type="password" id="admin-password" placeholder="סיסמת אדמין">
           <button id="admin-login-btn">התחבר</button>
-      </div>
+      </div> -->
   </section>
   
     <h4>לכל בעיה טכנית ניתן לפנות לצוות התמיכה שלנו או בעמוד <a href="../ContactUs/ContactUs.html">צור קשר</a></h4>

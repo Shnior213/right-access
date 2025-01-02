@@ -1,4 +1,90 @@
-/* Accessibility CSS */
+#accessibility-toggle {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#accessibility-menu {
+    display: flex;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    bottom: calc(20px + 50px + 10px);
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#accessibility-menu button {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    width: 120px;
+    text-align: center;
+}
+
+#accessibility-menu button:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+.high-contrast {
+    background-color: black;
+    color: white;
+}
+
+.color-blind-mode {
+    filter: grayscale(100%);
+}
+
+.invert-colors {
+    filter: invert(100%);
+}
+
+.reduce-motion * {
+    animation: none !important;
+    transition: none !important;
+}
+
+.highlight-links a {
+    background-color: yellow;
+    color: black;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+body {
+    position: relative;
+}
+
+
+/* 
 .high-contrast {
     background-color: black;
     color: white;
@@ -70,7 +156,6 @@
     background-color: #e2e6ea;
 }
 
-/* New Accessibility Features */
 .invert-colors {
     filter: invert(100%);
 }
@@ -86,7 +171,7 @@
     padding: 2px 4px;
     border-radius: 4px;
 }
-
+ */
 /*
 // Accessibility CSS 
 .high-contrast {
