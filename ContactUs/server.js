@@ -1,49 +1,4 @@
-document.querySelector('.contact-form').addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const form = e.target;
-    const submitButton = form.querySelector('button[type="submit"]');
-
-    if (!name || !email || !message) {
-        alert('אנא מלא את כל השדות הדרושים.');
-        return;
-    }
-
-    if (!/\S+@\S+\.\S+/.test(email)) {
-        alert('אנא הכנס כתובת אימייל תקינה.');
-        return;
-    }
-
-    try {
-        submitButton.disabled = true;
-        submitButton.textContent = 'שולח...';
-
-        const res = await fetch('http://localhost:3000/submit', {
-            method: 'POST',
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ name, email, message, phone }),
-        });
-
-        if (!res.ok) {
-            throw new Error(`Server error: ${res.statusText}`);
-        }
-
-        alert('הטופס נשלח בהצלחה!');
-        form.reset();
-    } catch (error) {
-        alert('שגיאה בשליחת הטופס: ' + error.message);
-    } finally {
-        submitButton.disabled = false;
-        submitButton.textContent = 'שלח';
-    }
-});
-
-
-/* const express = require('express');
+const express = require('express');
 const cors = require('cors')
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
@@ -76,7 +31,7 @@ app.post('/submit', (req, res) => {
         return res.status(400).send('אנא מלא את כל השדות הדרושים.');
     }
 
-    
+
 
     const mailOptions = {
         from: email,
@@ -99,4 +54,3 @@ app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
 
- */
