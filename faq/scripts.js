@@ -1,21 +1,23 @@
 
-const questionsContainer = document.getElementById("questions-container");
-const userQuestionInput = document.getElementById("user-question");
-const submitQuestionBtn = document.getElementById("submit-question");
-const adminPasswordInput = document.getElementById("admin-password");
-const adminLoginBtn = document.getElementById("admin-login-btn");
+
+// משתנים ופונקציות של שאלות מ-main
+const questionsContainer = document.getElementById('questions-container');
+const userQuestionInput = document.getElementById('user-question');
+const submitQuestionBtn = document.getElementById('submit-question');
+const adminPasswordInput = document.getElementById('admin-password');
+const adminLoginBtn = document.getElementById('admin-login-btn');
 
 const adminPassword = "1234"; // סיסמת אדמין
 let isAdmin = false; // סטטוס התחברות של אדמין
 let questions = []; // רשימת שאלות
 
-// פונקציה להצגת כל השאלות
 function renderQuestions() {
-  questionsContainer.innerHTML = ""; // איפוס התצוגה
+  questionsContainer.innerHTML = "";
   questions.forEach((question, index) => {
-      const questionDiv = document.createElement("div");
-      questionDiv.classList.add("question");
-      questionDiv.innerHTML = `<p>${question.text}</p>`;
+    const questionDiv = document.createElement("div");
+    questionDiv.textContent = `${index + 1}. ${question}`;
+    questionsContainer.appendChild(questionDiv);
+  
 
         // הצגת תשובה (אם קיימת)
         if (question.answer) {

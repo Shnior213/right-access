@@ -109,15 +109,35 @@ section h2 {
     color: #007BFF;
     margin-bottom: 15px;
 }
-section h3{
+section h2 {
     text-align: center;
-    color:#007BFF
-}
-
-article {
+    font-size: 2em;
+    color: #007BFF;
+    margin-bottom: 15px;
+  }
+  
+  /* שילוב של שני הבראנצ'ים */
+  section h3 {
+    text-align: center;
+    color: #007BFF;
+  }
+  
+  article {
     margin-bottom: 20px;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background: white;
-}
+  }
+  
+  /* שילוב שינויים מ-feldmen ו-main */
+  article h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  article p {
+    font-size: 1.2em;
+    color: #555;
+  }
