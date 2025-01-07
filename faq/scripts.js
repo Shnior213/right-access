@@ -113,18 +113,7 @@ adminLogoutBtn.addEventListener("click", () => {
     renderQuestions(); // רענון התצוגה להסתרת אפשרויות ניהול
 });
 
-/* adminLoginBtn.addEventListener("click", () => {
-    const enteredPassword = adminPasswordInput.value.trim();
-    if (enteredPassword === adminPassword) {
-        isAdmin = true;
-        alert("התחברת כאדמין.");
-        adminPasswordInput.value = "";
-        renderQuestions(); // רענון התצוגה עם אפשרות להוסיף תשובות
-    } else {
-        alert("סיסמה שגויה.");
-    }
-});
- */
+
 // טעינת השאלות עם טעינת הדף
 loadQuestionsFromLocalStorage();
 
