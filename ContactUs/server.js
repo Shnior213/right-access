@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer');
 const app = express();
 require("dotenv").config();
 
-const myemail = process.env.MY_EMAIL;
+const myemail = 'shnioramir123@gmail.com';
 const mypass = process.env.PASS;
 
 console.log(myemail); // אמור להציג את המייל
